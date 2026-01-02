@@ -1,7 +1,7 @@
 (() => {
   // Resolver sin la triple condicional dentro del if
   // includes? arrays?
-  function isRedFruit(fruit: string): boolean {
+  const isRedFruit = (fruit: string): boolean   => {
     const redFruits = ['manzana', 'cereza', 'ciruela'];
     const result = redFruits.includes(fruit);
     return result;
@@ -18,7 +18,7 @@
 
     console.log('verificando si existe el color en el objeto');
     if (!fruitsByColor.hasOwnProperty(color)) {
-      console.error('the color must be: red, yellow, purple');
+      console.error('valor ingresado no es existe');
     }
 
     const result = fruitsByColor[color];
@@ -31,7 +31,7 @@
   let isThirdStepWorking = true;
   let isFourthStepWorking = false;
 
-  function workingSteps() {
+  const workingSteps=() => {
     if (!isFirstStepWorking) return 'First step broken.';
     if (!isSecondStepWorking) return 'Second step broken.';
     if (!isThirdStepWorking) return 'Third step broken.';
